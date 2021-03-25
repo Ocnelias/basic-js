@@ -37,7 +37,7 @@ class VigenereCipheringMachine {
   */
   crypt(input, key) {
     if (input === 'undefined' || key === 'undefined') {
-      throw Error('error arguments');
+      throw new CustomError('error');
     }
     let output = "";
     for (let i = 0, j = 0; i < input.length; i++) {
@@ -57,7 +57,7 @@ class VigenereCipheringMachine {
 
   encrypt(message, key) {
     if (message === 'undefined' || key === 'undefined') {
-      throw Error('error arguments');
+      throw new CustomError('error arguments');
     }
 
     let keyArray = filterKey(key);
@@ -72,7 +72,7 @@ class VigenereCipheringMachine {
 
   decrypt(message, key) {
     if (message === 'undefined' || key === 'undefined') {
-      throw Error('error arguments');
+      throw CustomError('error arguments');
     }
 
     let keyArray = filterKey(key);
