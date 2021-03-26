@@ -21,7 +21,7 @@ module.exports = function getSeason(date) {
   } else if (date instanceof Date && !isNaN(date)) {
     return mapping[date.getMonth()];
   } else {
-    throw new CustomError('THROWN');
+    throw new Error();
   }
 
 }
