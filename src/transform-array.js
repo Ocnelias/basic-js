@@ -35,7 +35,7 @@ module.exports = function transform(arr) {
       }
     }
   } else {
-    throw new CustomError('err');
+    throw new Error();
   }
 
   return res;
